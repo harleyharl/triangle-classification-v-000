@@ -44,7 +44,7 @@ class Triangle
       @length2 + @length3 > @length1
       begin
           raise TriangleError
-        end 
+        end
     end
   end
       #raise error
