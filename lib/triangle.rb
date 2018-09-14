@@ -1,14 +1,14 @@
 require 'pry'
 
-class TriangleError < StandardError
-
-  def message
-   "this is not a valid triangle"
-  end
-
-end
-
 class Triangle
+
+  class TriangleError < StandardError
+
+    def message
+     "this is not a valid triangle"
+    end
+
+  end
 
   def initialize(length1, length2, length3)
     # Triangle.new(length1, length2, length3)
@@ -39,7 +39,7 @@ class Triangle
           raise TriangleError
       end
     elsif
-      #"triangle inequality checken "
+      # "triangle inequality checker"
       @length1 + @length2 > @length3 || @length1 + @length3 > @length2 || @length2 + @length3 > @length1
       begin
           raise TriangleError
