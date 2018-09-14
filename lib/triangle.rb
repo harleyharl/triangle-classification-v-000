@@ -39,9 +39,8 @@ class Triangle
           raise TriangleError
       end
     elsif
-      @length1 + @length2 > @length3
-      @length1 + @length3 > @length2
-      @length2 + @length3 > @length1
+      #"triangle inequality checken "
+      @length1 + @length2 > @length3 || @length1 + @length3 > @length2 || @length2 + @length3 > @length1
       begin
           raise TriangleError
         end
