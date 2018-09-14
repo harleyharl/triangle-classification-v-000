@@ -1,14 +1,14 @@
 require 'pry'
 
-class Triangle
+class TriangleError < StandardError
 
-  class TriangleError < StandardError
-
-    def message
-     "this is not a valid triangle"
-    end
-
+  def message
+   "this is not a valid triangle"
   end
+
+end
+
+class Triangle
 
   def initialize(length1, length2, length3)
     # Triangle.new(length1, length2, length3)
@@ -33,11 +33,6 @@ class Triangle
     elsif
       @length1 != @length3 && @length3 != @length2
       :scalene
-    # elsif
-    #   @length1 == 0 || @length2 == 0 || @length3 == 0
-    #   begin
-    #     raise TriangleError
-    #   end
      else
       @length1 <= 0 || @length2 <= 0 || @length3 <= 0
       begin
