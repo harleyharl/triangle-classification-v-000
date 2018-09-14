@@ -36,6 +36,7 @@ class Triangle
       :scalene
     # elsif self.valid? != true
     #   TriangleError
+  else TriangleError 
     end
 
   end
